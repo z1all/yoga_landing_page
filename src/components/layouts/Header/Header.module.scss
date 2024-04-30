@@ -1,0 +1,50 @@
+@import "src/styles/_container";
+@import "src/styles/variables";
+
+.headerContainer {
+  @extend .commonContainer;
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoImg {
+  vertical-align: middle;
+  width: 50px;
+  margin-right: 6px;
+}
+
+.logoText {
+  vertical-align: middle;
+  font-weight: 300;
+  font-family: $menu-logo-front;
+  color: $accent-and-titles-color;
+  font-size: $desktop-menu-logo-font-size;
+}
+
+@media screen and (max-width: $tablet-screen-size) {
+  .headerContainer {
+    padding-top: 19px;
+  }
+
+  .logoImg {
+    width: 48px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: $mobile-screen-size) {
+  .headerContainer {
+    padding-top: 48px;
+  }
+
+  .logoImg {
+    width: 41px;
+    margin-right: 4.29px;
+  }
+
+  .logoText {
+    font-size: $mobile-menu-logo-font-size;
+  }
+}
