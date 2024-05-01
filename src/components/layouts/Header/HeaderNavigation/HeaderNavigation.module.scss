@@ -1,0 +1,35 @@
+@import "../../../../styles/variables";
+
+.ul {
+  display: flex;
+}
+
+.ul > *:not(:last-child) {
+  margin-right: 26px;
+}
+
+@media screen and (max-width: 900px) {
+  .ul > *:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .ul {
+    display: inline;
+  }
+
+  .nav {
+    position: absolute;
+    right: 50px;
+    top: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: $background-and-text-color;
+    box-shadow: 0 0 4px 0.05px $secondary-color;
+  }
+
+  .menuNotActive {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
