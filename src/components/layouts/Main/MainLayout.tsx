@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import classes from "*.module.css";
+import classes from "./MainLayout.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -18,3 +18,13 @@ const MainLayout : FC<IMainLayout> = () => {
 };
 
 export default MainLayout;
+
+/*
+
+<div className={classes.mainContainer}>
+    <div className={classes.content}>
+
+    </div>
+</div>
+
+ */

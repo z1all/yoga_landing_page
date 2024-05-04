@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.ul {
+  display: flex;
+
+  *:not(:last-child) {
+    margin-right: 26px;
+
+    @include tablet-screen {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  @include tablet-screen {
+    display: inline;
+  }
+}
+
+.nav {
+  @include tablet-screen {
+    position: absolute;
+    right: 50px;
+    top: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: $background-and-text-color;
+    box-shadow: 0 0 4px 0.05px $secondary-color;
+  }
+}
+
+.menuNotActive {
+  @include tablet-screen {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

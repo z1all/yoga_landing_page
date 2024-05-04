@@ -1,0 +1,93 @@
+@import "src/styles/container";
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.headerContainer {
+  @extend .commonContainer;
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  white-space: nowrap;
+
+  @include tablet-screen {
+    padding-top: 19px;
+  }
+
+  @include mobile-screen {
+    padding-top: 48px;
+  }
+}
+
+.logoImg {
+  vertical-align: middle;
+  width: 50px;
+  margin-right: 6px;
+
+  @include tablet-screen {
+    width: 48px;
+    margin-right: 5px;
+  }
+
+  @include mobile-screen {
+    width: 41.14px;
+    margin-right: 4.29px;
+  }
+}
+
+.logoText {
+  vertical-align: middle;
+  font-weight: 300;
+  font-family: $menu-logo-front;
+  color: $accent-and-titles-color;
+  font-size: 12px;
+
+  @include mobile-screen {
+    font-size: 10.29px;
+  }
+}
+
+.callImg {
+  vertical-align: middle;
+  width: 18px;
+  margin-right: 5px;
+
+  @include tablet-screen {
+    margin-right: 8px;
+  }
+
+  @include mobile-screen {
+    margin-right: 5px;
+    width: 15px;
+  }
+}
+
+.callText {
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $menu-front;
+  letter-spacing: 0.05em;
+
+  @include tablet-screen {
+    font-size: 14px;
+  }
+
+  @include  mobile-screen {
+    font-size: 12px;
+  }
+}
+
+.btnCollapse {
+  display: none;
+  vertical-align: middle;
+  width: 30px;
+  margin-left: 38px;
+
+  @include tablet-screen {
+    margin-left: 35px;
+    display: inline-block;
+  }
+}

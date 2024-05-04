@@ -1,0 +1,14 @@
+@import "variables";
+@import "media";
+
+.commonContainer {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1194px;
+  padding: 0 36px;
+
+  @include mobile-screen {
+    padding: 0 24px;
+  }
+}
+
