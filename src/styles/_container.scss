@@ -1,14 +1,14 @@
 @import "variables";
+@import "media";
 
 .commonContainer {
   margin: 0 auto;
   height: 100%;
   max-width: 1194px;
-  padding: 0 24px;
-}
+  padding: 0 36px;
 
-@media screen and (max-width: $mobile-screen-size) {
-  .commonContainer {
-    padding: 0 20px;
+  @include mobile-screen {
+    padding: 0 24px;
   }
 }
+
