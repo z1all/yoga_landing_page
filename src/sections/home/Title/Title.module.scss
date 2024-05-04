@@ -1,0 +1,12 @@
+@import "src/styles/media";
+
+.temp {
+  width: 579px;
+  height: 168px;
+  border: 1px solid red;
+  margin-bottom: 56px;
+
+  @include tablet-screen {
+    margin-bottom: 32px;
+  }
+}

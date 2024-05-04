@@ -1,17 +1,20 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 import classes from "./MainLayout.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-interface IMainLayout {
 
+interface IMainLayout {
+    children: ReactNode
 }
 
-const MainLayout : FC<IMainLayout> = () => {
+const MainLayout : FC<IMainLayout> = ({children}) => {
     return (
         <>
             <Header/>
-
+            <div className={classes.gap}>
+                {children}
+            </div>
             <Footer/>
         </>
     );
