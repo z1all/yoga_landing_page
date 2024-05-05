@@ -1,4 +1,5 @@
 @import "src/styles/container";
+@import "src/styles/media";
 
 .homeContainer {
   @extend .commonContainer;
@@ -9,11 +10,27 @@
   grid-template-areas:
     "Title        Slider"
     "Description  Slider"
-    "ListInfo     Slider"
+    "ListInfo     Slider";
+
+  @include mobile-screen {
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "Title"
+    "Slider"
+    "Description"
+    "ListInfo";
+  }
 }
 
 .Title{
   grid-area: Title;
+
+  @include tablet-screen {
+    max-width: 370px;
+  }
 }
 
 .Description{

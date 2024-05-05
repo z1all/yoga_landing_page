@@ -1,12 +1,21 @@
 @import "src/styles/media";
+@import "src/styles/variables";
 
-.temp {
+.TitleContainer {
   width: 579px;
   height: 168px;
   border: 1px solid red;
   margin-bottom: 56px;
 
   @include tablet-screen {
+    width: 397px;
+    height: 107px;
     margin-bottom: 32px;
+  }
+
+  @include mobile-screen {
+    width: 339px;
+    height: 91px;
+    text-align: center;
   }
 }

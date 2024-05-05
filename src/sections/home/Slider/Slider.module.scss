@@ -1,5 +1,17 @@
+@import "src/styles/media";
+
 .temp {
   width: 488px;
   height: 650px;
   border: 1px solid red;
+
+  @include tablet-screen {
+    width: 310px;
+    height: 495px;
+  }
+
+  @include mobile-screen {
+    width: 327px;
+    height: 380px;
+  }
 }

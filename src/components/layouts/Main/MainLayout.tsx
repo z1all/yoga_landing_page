@@ -1,5 +1,5 @@
 import React, {FC, ReactNode} from 'react';
-import classes from "./MainLayout.module.css";
+import classes from "./MainLayout.module.scss";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 

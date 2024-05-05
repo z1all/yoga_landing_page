@@ -1,5 +1,13 @@
-.temp {
+@import "src/styles/media";
+
+.descriptionContainer {
   width: 276px;
   height: 43px;
   border: 1px solid red;
+
+  @include mobile-screen {
+    width: 296px;
+    height: 32px;
+    text-align: center;
+  }
 }

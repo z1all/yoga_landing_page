@@ -1,0 +1,27 @@
+@import "src/styles/media";
+
+.gap {
+    > *:first-child {
+        margin-top: 104px;
+
+        @include tablet-screen {
+            margin-top: 77px;
+        }
+
+        @include mobile-screen {
+            margin-top: 52px;
+        }
+    }
+
+    > * {
+        margin-bottom: 120px !important;
+
+        @include tablet-screen {
+            margin-bottom: 100px !important;
+        }
+
+        @include mobile-screen {
+            margin-bottom: 88px !important;
+        }
+    }
+}

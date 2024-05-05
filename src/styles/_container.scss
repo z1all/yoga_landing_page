@@ -6,8 +6,14 @@
   height: 100%;
   max-width: 1194px;
   padding: 0 36px;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    max-width: 768px;
+  }
 
   @include mobile-screen {
+    max-width: 375px;
     padding: 0 24px;
   }
 }

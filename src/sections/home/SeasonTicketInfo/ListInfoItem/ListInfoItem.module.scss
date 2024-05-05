@@ -1,0 +1,37 @@
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.listInfoItemContainer {
+  width: 183px;
+  height: 44px;
+  //border: 1px solid red;
+  display: flex;
+  align-items: flex-end;
+
+  @include tablet-screen {
+    height: 38px;
+  }
+
+  @include mobile-screen {
+    width: 174px;
+    height: 38px;
+  }
+}
+
+.number {
+  color: $accent-and-titles-color;
+  font-family: $NewYorkerC-regular-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-right: 8px;
+
+  @include tablet-screen {
+    font-size: 32px;
+    line-height: 28.8px;
+  }
+
+  @include mobile-screen {
+    line-height: 35.1px;
+  }
+}
