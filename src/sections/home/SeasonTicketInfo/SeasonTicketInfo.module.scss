@@ -2,10 +2,12 @@
 
 .seasonTicketInfoContainer {
   height: 100%;
-  border: 1px solid red;
+  //border: 1px solid red;
   display: flex;
   justify-content: left;
   align-items: end;
+  padding-bottom: 17px;
+  box-sizing: border-box;
 }
 
 .imagWomen {

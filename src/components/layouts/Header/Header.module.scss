@@ -39,7 +39,7 @@
 .logoText {
   vertical-align: middle;
   font-weight: 300;
-  font-family: $menu-logo-front;
+  font-family: $Bookman-OldStyle-font;
   color: $accent-and-titles-color;
   font-size: 12px;
 
@@ -68,7 +68,7 @@
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: $menu-front;
+  font-family: $Raleway-regular-font;
   letter-spacing: 0.05em;
 
   @include tablet-screen {

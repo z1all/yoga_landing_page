@@ -1,13 +1,69 @@
 @import "src/styles/media";
 
-.temp {
+.sliderContainer {
   width: 488px;
   height: 650px;
+  border: 1px solid black;
+
+  @include tablet-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 310px;
+    height: 495px;
+  }
+
+  @include mobile-screen {
+    width: 327px;
+    height: 380px;
+  }
+}
+
+.imageContainer {
+  width: 488px;
+  height: 604px;
+
   border: 1px solid red;
+  box-sizing: border-box;
 
   @include tablet-screen {
     width: 310px;
-    height: 495px;
+    height: 403px;
+  }
+
+  @include mobile-screen {
+    width: 327px;
+    height: 380px;
+  }
+}
+
+.navigationContainer {
+  width: 488px;
+  height: 34px;
+  margin-top: 12px;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    width: 310px;
+    margin-top: 32px;
+  }
+
+  @include mobile-screen {
+    display: none;
+  }
+}
+
+.image {
+  object-fit: cover;
+  width: 488px;
+  height: 604px;
+  border-radius: 244px 244px 0 0;
+
+  @include tablet-screen {
+    width: 310px;
+    height: 403px;
   }
 
   @include mobile-screen {
