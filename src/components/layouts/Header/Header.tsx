@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import classes from "./Header.module.scss";
 import HeaderNavigation from "./HeaderNavigation/HeaderNavigation";
 
-import logo from '../../../assets/imgs/logo.svg';
-import call from '../../../assets/imgs/call.svg';
-import menu from '../../../assets/imgs/menu.svg';
+import logo from '../../../assets/imgs/menu/logo.svg';
+import call from '../../../assets/imgs/menu/call.svg';
+import menu from '../../../assets/imgs/menu/menu.svg';
 
 const Header = () => {
     const [isActive, setIsActive] = useState(false);

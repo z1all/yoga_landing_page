@@ -1,11 +1,12 @@
-@import "../../../../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/media";
 
 .a {
   color: $text-color;
   text-decoration: none;
   font-weight: 500;
-  font-family: $menu-front;
-  font-size: $desktop-menu-font-size;
+  font-family: $Raleway-regular-font;
+  font-size: 13px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   display: inline-block;
@@ -15,13 +16,4 @@
 .a:hover {
   transform: translateY(1.5px);
   color: $accent-and-titles-color;
-}
-@media screen and (max-width: $tablet-screen-size) {
-
-}
-
-@media screen and (max-width: $mobile-screen-size) {
-  .a {
-    font-size: $mobile-menu-font-size;
-  }
 }

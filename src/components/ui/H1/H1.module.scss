@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.H1 {
+  color: $accent-and-titles-color;
+  font-family: $NewYorkerC-regular-font;
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 100.8px;
+  letter-spacing: 0.007em;
+
+  @include tablet-screen {
+    font-size: 54px;
+    line-height: 59.4px;
+  }
+
+  @include mobile-screen {
+    font-size: 48px;
+    line-height: 52.8px;
+  }
+}

@@ -1,0 +1,81 @@
+@import "src/styles/container";
+@import "src/styles/media";
+
+.homeContainer {
+  @extend .commonContainer;
+  position: relative;
+  height: 650px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "Title        Slider"
+    "Description  Slider"
+    "ListInfo     Slider";
+
+  @include tablet-screen {
+    height: 495px;
+  }
+
+  @include mobile-screen {
+    height: 839px;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: 155px 412px 80px 192px;
+    grid-template-areas:
+    "Title"
+    "Slider"
+    "Description"
+    "ListInfo";
+  }
+}
+
+.Title{
+  grid-area: Title;
+
+  @include tablet-screen {
+    max-width: 370px;
+  }
+}
+
+.Description{
+  grid-area: Description;
+}
+
+.ListInfo{
+  grid-area: ListInfo;
+}
+
+.Slider{
+  grid-area: Slider;
+}
+
+.buttonContainer {
+  @extend .containerWithParentPadding;
+  position: absolute;
+  justify-self: normal;
+}
+
+.button {
+  position: absolute;
+  right: 610px;
+  left: 435px;
+  top: 291.16px;
+  bottom: 204.84px;
+
+  @include tablet-screen {
+    right: 342px;
+    left: 243px;
+    top: 209.42px;
+    bottom: 174.58px;
+  }
+
+  @include mobile-screen {
+    left: 215px;
+    right: 1px;
+    top: 143px;
+    bottom: 585px;
+  }
+}

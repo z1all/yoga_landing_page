@@ -1,0 +1,62 @@
+@import "src/styles/media";
+
+.seasonTicketInfoContainer {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  box-sizing: border-box;
+
+  //border: 1px solid red;
+
+  @include tablet-screen {
+    padding-bottom: 17px;
+  }
+
+  @include mobile-screen {
+    padding-bottom: 0;
+  }
+}
+
+.imagWomen {
+  object-fit: cover;
+  width: 183px;
+  height: 250px;
+  border-radius: 91.5px 91.5px 0 0;
+
+  @include tablet-screen {
+    width: 139px;
+    height: 192px;
+  }
+}
+
+.listContainer {
+  width: 183px;
+  height: 178px;
+  margin-left: 19px;
+
+  //border: 1px solid red;
+
+  > *:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include tablet-screen {
+      margin-bottom: 10px;
+    }
+
+    @include mobile-screen {
+      margin-bottom: 8px;
+    }
+  }
+
+  @include tablet-screen {
+    margin-left: 2px;
+    height: 135px;
+  }
+
+  @include mobile-screen {
+    margin-left: 14px;
+    width: 174px;
+    height: 125px;
+  }
+}
