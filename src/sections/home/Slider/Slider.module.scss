@@ -3,7 +3,8 @@
 .sliderContainer {
   width: 488px;
   height: 650px;
-  border: 1px solid black;
+
+  //border: 1px solid black;
 
   @include tablet-screen {
     display: flex;
@@ -20,11 +21,12 @@
 }
 
 .imageContainer {
+  position: relative;
   width: 488px;
   height: 604px;
 
-  border: 1px solid red;
-  box-sizing: border-box;
+  //border: 1px solid red;
+  //box-sizing: border-box;
 
   @include tablet-screen {
     width: 310px;
@@ -37,25 +39,8 @@
   }
 }
 
-.navigationContainer {
-  width: 488px;
-  height: 34px;
-  margin-top: 12px;
-
-  border: 1px solid red;
-  box-sizing: border-box;
-
-  @include tablet-screen {
-    width: 310px;
-    margin-top: 32px;
-  }
-
-  @include mobile-screen {
-    display: none;
-  }
-}
-
 .image {
+  position: absolute;
   object-fit: cover;
   width: 488px;
   height: 604px;
@@ -69,5 +54,63 @@
   @include mobile-screen {
     width: 327px;
     height: 380px;
+  }
+}
+
+.imageHidden {
+  opacity: 0;
+}
+
+.navigationContainer {
+  width: 488px;
+  height: 34px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+
+  //border: 1px solid red;
+  //box-sizing: border-box;
+
+  @include tablet-screen {
+    width: 310px;
+    margin-top: 32px;
+  }
+
+  @include mobile-screen {
+    display: none;
+  }
+}
+
+.numbersStatusBasContainer {
+  width: 26px;
+  height: 19px;
+  margin-right: 19px;
+
+  //border: 1px solid red;
+  //box-sizing: border-box;
+
+  @include tablet-screen {
+    margin-right: 10px;
+  }
+}
+
+.statusBasContainer {
+  flex: 1;
+}
+
+.buttonStatusBasContainer {
+  width: 76px;
+  height: 34px;
+  margin-left: 26px;
+
+  //border: 1px solid red;
+  //box-sizing: border-box;
+
+  .leftButton {
+    margin-right: 8px;
+  }
+
+  @include tablet-screen {
+    margin-left: 5px;
   }
 }
