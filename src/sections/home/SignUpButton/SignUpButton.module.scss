@@ -1,0 +1,61 @@
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.signUpButton {
+  width: 155px;
+  height: 155px;
+  border: none;
+  background-color: $accent-and-titles-color;
+  border-radius: 50%;
+
+  font-family: $Raleway-regular-font;
+  font-size: 15px;
+  font-weight: 500;
+  color: $background-and-text-color;
+  text-transform: uppercase;
+  line-height: 17.61px;
+  letter-spacing: 0.05em;
+
+  @include tablet-screen {
+    width: 111px;
+    height: 111px;
+
+    font-size: 12px;
+    line-height: 14.09px;
+    letter-spacing: 0.07em;
+  }
+}
+
+.flower {
+  position: absolute;
+  z-index: -100;
+  top: 66px;
+  left: 77px;
+  transition: all 1.2s ease;
+  transform: translate(-50%, -50%) scale(0);
+
+  @include tablet-screen {
+    top: 52px;
+    left: 50px;
+  }
+
+  @include mobile-screen {
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%) scale(0) rotate(-26deg);
+  }
+}
+
+.signUpButtonContainer:hover {
+  .flower {
+    transform: translate(-50%, -50%) scale(1);
+
+    @include tablet-screen {
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    @include mobile-screen {
+      transform: translate(-50%, -50%) scale(0.62) rotate(13deg);
+    }
+  }
+}

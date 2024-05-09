@@ -2,12 +2,20 @@
 
 .seasonTicketInfoContainer {
   height: 100%;
-  //border: 1px solid red;
   display: flex;
   justify-content: left;
   align-items: end;
-  padding-bottom: 17px;
   box-sizing: border-box;
+
+  //border: 1px solid red;
+
+  @include tablet-screen {
+    padding-bottom: 17px;
+  }
+
+  @include mobile-screen {
+    padding-bottom: 0;
+  }
 }
 
 .imagWomen {
@@ -25,8 +33,9 @@
 .listContainer {
   width: 183px;
   height: 178px;
-  //border: 1px solid red;
   margin-left: 19px;
+
+  //border: 1px solid red;
 
   > *:not(:last-child) {
     margin-bottom: 24px;

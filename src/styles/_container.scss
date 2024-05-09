@@ -1,6 +1,8 @@
 @import "variables";
 @import "media";
 
+//$commonContainer-padding
+
 .commonContainer {
   margin: 0 auto;
   height: 100%;
@@ -19,3 +21,14 @@
   }
 }
 
+.containerWithParentPadding {
+  margin: 0 200px;
+
+  @include tablet-screen {
+    margin: 0 36px;
+  }
+
+  @include mobile-screen {
+    margin: 0 24px;
+  }
+}

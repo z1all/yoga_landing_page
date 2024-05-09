@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {FC} from 'react';
+import classes from './SignUpButton.module.scss'
+import flower from '../../../assets/imgs/home/Vector.svg';
 
-const SignUpButton = () => {
+interface ISignUpButton {
+    className?: string
+}
+
+const SignUpButton: FC<ISignUpButton> = ({className}) => {
     return (
-        <div style={{position: "absolute", top: "50%", right: "50%"}}>
-            SignUpButton
+        <div className={`${classes.signUpButtonContainer} ${className}`}>
+            <button className={`${classes.signUpButton}`}>
+                Записаться
+            </button>
+            <div className={`${classes.flower}`}>
+                <img src={flower} alt="Flower"/>
+            </div>
         </div>
     );
 };

@@ -21,7 +21,9 @@ const Home = () => {
             <div className={classes.Slider}>
                 <Slider/>
             </div>
-            {/*<SignUpButton/>*/}
+            <div className={classes.buttonContainer}>
+                <SignUpButton className={classes.button}/>
+            </div>
         </div>
     );
 };
