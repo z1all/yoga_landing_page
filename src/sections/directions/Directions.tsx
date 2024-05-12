@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import classes from './Directions.module.scss'
 import {api} from "../../services/api";
+import H2 from "../../components/ui/H2/H2";
+import TitleAndHint from "./TitleAndHint/TitleAndHint";
 
 const Directions = () => {
 
@@ -11,7 +13,7 @@ const Directions = () => {
     return (
         <div className={classes.directionsContainer}>
             <div className={classes.titleAndHintContainer}>
-
+                <TitleAndHint/>
             </div>
             <div className={classes.directionsListContainer}>
 

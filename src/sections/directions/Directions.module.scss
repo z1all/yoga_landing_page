@@ -17,6 +17,8 @@
     height: 626px;
     padding-bottom: 0;
 
+    justify-content: center;
+    justify-items: center;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
@@ -45,8 +47,8 @@
   height: 105px;
   margin-bottom: 72px;
 
-  border: 1px solid red;
-  box-sizing: border-box;
+  //border: 1px solid red;
+  //box-sizing: border-box;
 
   @include tablet-screen {
     height: 69px;

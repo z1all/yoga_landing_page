@@ -1,0 +1,46 @@
+@import "src/styles/media";
+
+.container {
+  display: flex;
+
+  @include tablet-screen {
+    display: block;
+  }
+}
+
+.title {
+  display: inline-block;
+  width: 692px;
+  height: 105px;
+
+  @include tablet-screen {
+    width: 428px;
+    height: 69px;
+  }
+
+  @include mobile-screen {
+    width: 309px;
+    height: 51px;
+    margin-bottom: 32px;
+  }
+}
+
+.hint {
+  vertical-align: top;
+  display: inline-block;
+  width: 362px;
+  height: 41px;
+  margin: 12px 45px 0 auto ;
+
+  @include tablet-screen {
+    width: 245px;
+    height: 51px;
+    margin: 5px 0 0 auto;
+  }
+
+  @include mobile-screen {
+    width: 273px;
+    height: 33px;
+    margin: 0;
+  }
+}
