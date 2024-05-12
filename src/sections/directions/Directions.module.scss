@@ -90,8 +90,8 @@
   width: 346px;
   height: 493px;
 
-  border: 1px solid red;
-  box-sizing: border-box;
+  //border: 1px solid red;
+  //box-sizing: border-box;
 
   @include tablet-screen {
     width: 312px;
@@ -111,8 +111,8 @@
   height: 493px;
   margin-left: 81px;
 
-  border: 1px solid red;
-  box-sizing: border-box;
+  //border: 1px solid red;
+  //box-sizing: border-box;
 
   @include tablet-screen {
     width: 338px;

@@ -1,5 +1,5 @@
 
-export enum weekday {
+export enum Weekday {
     Monday = 0 ,
     Tuesday = 1,
     Wednesday = 2,
@@ -12,7 +12,8 @@ export enum weekday {
 export interface IDirection {
     name: string;
     description: string;
-    weekdays: weekday[];
+    weekdays: Weekday[];
     durationMinutes: number;
     imageUrl: string;
 }
+
