@@ -1,0 +1,127 @@
+@import "src/styles/container";
+@import "src/styles/media";
+
+.directionsContainer {
+  @extend .commonContainer;
+  height: 682px;
+  padding-bottom: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "titleAndHint    titleAndHint titleAndHint"
+    "directionsList  img          descriptionAndSlider";
+
+  @include tablet-screen {
+    height: 626px;
+    padding-bottom: 0;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "titleAndHint   titleAndHint"
+    "directionsList directionsList"
+    "img            descriptionAndSlider";
+  }
+
+  @include mobile-screen {
+    height: 808px;
+
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "titleAndHint"
+    "directionsList"
+    "img"
+    "descriptionAndSlider";
+  }
+}
+
+.titleAndHintContainer {
+  grid-area: titleAndHint;
+
+  width: 100%;
+  height: 105px;
+  margin-bottom: 72px;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    height: 69px;
+    margin-bottom: 56px;
+  }
+
+  @include mobile-screen {
+    height: 116px;
+    margin-top: 5px;
+    margin-bottom: 56px;
+  }
+}
+
+.directionsListContainer {
+  grid-area: directionsList;
+
+  width: 319px;
+  margin-right: 47px;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    width: 100%;
+    height: 47px;
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+
+  @include mobile-screen {
+    height: 39px;
+    margin-bottom: 24px;
+  }
+}
+
+.imageContainer {
+  grid-area: img;
+
+  width: 346px;
+  height: 493px;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    width: 312px;
+    height: 422px;
+  }
+
+  @include mobile-screen {
+    width: 327px;
+    height: 258px;
+  }
+}
+
+.descriptionAndSliderContainer {
+  grid-area: descriptionAndSlider;
+
+  width: 407px;
+  height: 493px;
+  margin-left: 81px;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  @include tablet-screen {
+    width: 338px;
+    height: 422px;
+    margin-left: 46px;
+  }
+
+  @include mobile-screen {
+    width: 326px;
+    height: 279px;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+}

@@ -22,7 +22,7 @@ const NumbersStatusBas: FC<INumbersStatusBas> = ({currentNumber, maxNumber}) => 
     return (
         <span className={classes.numbersContainer}>
             {a.map((num, index) => (
-                <span className={classes.textWrapper} style={{opacity: num.opacity, zIndex: num.opacity}}>
+                <span className={classes.textWrapper} style={{opacity: num.opacity, zIndex: num.opacity}} key={index}>
                     <span className={classes.currentNumber}>{num.number}</span>
                     <span className={classes.maxNumber}>/{maxNumber}</span>
                 </span>
