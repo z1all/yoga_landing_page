@@ -5,6 +5,7 @@ import TitleAndHint from "./TitleAndHint/TitleAndHint";
 import DescriptionAndSlider from "./DescriptionAndSlider/DescriptionAndSlider";
 import {IDirection} from "../../types/types";
 import ImageSlider from "./ImageSlider/ImageSlider";
+import DirectionsList from "./DirectionsList/DirectionsList";
 
 const Directions = () => {
     const [directions, setDirections] = useState<IDirection[]>([]);
@@ -28,6 +29,11 @@ const Directions = () => {
         setTransitionSpeed(0.6);
     }
 
+    const setNewDirection = (newDirection : number) => {
+        setDirectionsIndex(newDirection);
+        setTransitionSpeed(0.6);
+    }
+
     if (directionsCount === 0) return (<div className={classes.loadingContainer}></div>);
 
     progress.percent = ((directionsIndex + 1) / directionsCount) * 100;
@@ -37,7 +43,7 @@ const Directions = () => {
                 <TitleAndHint/>
             </div>
             <div className={classes.directionsListContainer}>
-
+                <DirectionsList directions={directions} current={directionsIndex} setNewDirection={setNewDirection}/>
             </div>
             <div className={classes.imageContainer}>
                 <ImageSlider src={directions[directionsIndex].imageUrl} transitionSpeed={transitionSpeed}/>

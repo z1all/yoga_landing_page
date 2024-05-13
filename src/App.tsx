@@ -8,12 +8,6 @@ function App() {
         <MainLayout>
             <Home/>
             <Directions/>
-            <Directions/>
-            <Directions/>
-            {/*<Home/>*/}
-            {/*<Home/>*/}
-            {/*<Home/>*/}
-            {/*<Home/>*/}
         </MainLayout>
     );
 }

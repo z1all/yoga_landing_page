@@ -1,0 +1,22 @@
+@import "src/styles/media";
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  @include tablet-screen {
+    flex-wrap: nowrap;
+    position: absolute;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mobile-screen {
+    gap: 16px;
+  }
+}
