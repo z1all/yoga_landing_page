@@ -53,10 +53,10 @@ const Slider = () => {
             </div>
             <div className={classes.navigationContainer}>
                 <div className={classes.numbersStatusBarContainer}>
-                    <NumbersStatusBas currentNumber={imgIndex + 1} maxNumber={imgCount}/>
+                    <NumbersStatusBas currentNumber={imgIndex + 1} maxNumber={imgCount} transitionSpeed={transitionSpeed}/>
                 </div>
                 <div className={classes.statusBarContainer}>
-                    <StatusBar progress={((imgIndex + 1) / imgCount) * 100} transitionSpeed={transitionSpeed}/>
+                    <StatusBar progress={{percent: ((imgIndex + 1) / imgCount) * 100}} transitionSpeed={transitionSpeed}/>
                 </div>
                 <CircleButtonGroup moveLeft={moveLeft} moveRight={moveRight} className={classes.buttonStatusBarContainer}/>
             </div>

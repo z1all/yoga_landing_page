@@ -8,11 +8,12 @@ import TextWithImg from "./TextWithImg/TextWithImg";
 import StatusBar from "../../../components/ui/StatusBar/StatusBar";
 import CircleButtonGroup from "../../../components/ui/CircleButtonGroup/CircleButtonGroup";
 import {ToRuRange} from "../../../helpers/toRu";
+import ManifestationEffect from "../../../components/animations/ManifestationEffect/ManifestationEffect";
 
 interface IDescriptionAndSlider {
     moveLeft: () => void;
     moveRight: () => void;
-    progress: number;
+    progress: { percent: number };
     transitionSpeed: number;
     direction: IDirection;
 }
@@ -21,28 +22,31 @@ const DescriptionAndSlider: FC<IDescriptionAndSlider>
     = ({direction, progress, transitionSpeed, moveLeft, moveRight}) => {
 
     return (
-        <div className={classes.container}>
-            <div className={classes.directionInfo}>
-                <H3 className={classes.title}>{direction.name}</H3>
-                <div className={classes.textWithImgContainer}>
-                    <TextWithImg img={calendar} alt="Сalendar" className={classes.weekDays}>
-                        Проходит по: {ToRuRange(direction.weekdays)}
-                    </TextWithImg>
-                    <TextWithImg img={timer} alt="Timer" className={classes.duration}>
-                        Длительность по: {direction.durationMinutes} мин
-                    </TextWithImg>
+        <ManifestationEffect positionAnimation={true} transitionSpeed={transitionSpeed}>
+            <div className={classes.container}>
+                <div className={classes.directionInfo}>
+                    <H3 className={classes.title}>{direction.name}</H3>
+                    <div className={classes.textWithImgContainer}>
+                        <TextWithImg img={calendar} alt="Сalendar" className={classes.weekDays}>
+                            Проходит по: {ToRuRange(direction.weekdays)}
+                        </TextWithImg>
+                        <TextWithImg img={timer} alt="Timer" className={classes.duration}>
+                            Длительность по: {direction.durationMinutes} мин
+                        </TextWithImg>
+                    </div>
+                    <p className={classes.description}>
+                        {direction.description}
+                    </p>
                 </div>
-                <p className={classes.description}>
-                    {direction.description}
-                </p>
-            </div>
-            <div className={classes.navigationContainer}>
-                <CircleButtonGroup moveLeft={moveLeft} moveRight={moveRight} className={classes.buttonStatusBarContainer}/>
-                <div className={classes.statusBarContainer}>
-                    <StatusBar progress={progress} transitionSpeed={transitionSpeed}/>
+                <div className={classes.navigationContainer}>
+                    <CircleButtonGroup moveLeft={moveLeft} moveRight={moveRight}
+                                       className={classes.buttonStatusBarContainer}/>
+                    <div className={classes.statusBarContainer}>
+                        <StatusBar progress={progress} transitionSpeed={transitionSpeed}/>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ManifestationEffect>
     );
 };
 
