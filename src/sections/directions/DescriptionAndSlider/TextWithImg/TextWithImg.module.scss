@@ -1,0 +1,42 @@
+@import "src/styles/media";
+
+.img {
+  vertical-align: middle;
+
+  width: 24px;
+  height: 24px;
+
+  @include tablet-screen {
+    width: 26px;
+    height: 26px;
+  }
+
+  @include mobile-screen {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: $Raleway-regular-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  color: $text-color;
+
+  margin-left: 22.44px;
+
+  @include tablet-screen {
+    margin-left: 8px;
+  }
+
+  @include mobile-screen {
+    font-size: 13px;
+    line-height: 17.55px;
+
+    margin-left: 11px;
+  }
+}

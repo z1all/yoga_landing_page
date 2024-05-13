@@ -1,0 +1,107 @@
+@import "src/styles/media";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+}
+
+.directionInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+
+.title {
+  @include tablet-screen {
+    order: 1;
+
+    margin-bottom: 28px;
+  }
+
+  @include mobile-screen {
+    order: 0;
+    margin-bottom: 0;
+  }
+}
+
+.textWithImgContainer {
+  margin-top: 40px;
+  margin-bottom: 48px;
+
+  @include tablet-screen {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  @include mobile-screen {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.weekDays {
+  margin-bottom: 18px;
+
+  @include tablet-screen {
+    margin-bottom: 20px;
+  }
+
+  @include mobile-screen {
+    display: flex;
+    width: 122px;
+    height: 36px;
+
+    margin-bottom: 0;
+  }
+}
+
+.duration {
+  @include mobile-screen {
+    display: flex;
+    width: 131px;
+    height: 36px;
+
+    margin-right: 1px;
+  }
+}
+
+.description {
+  white-space: pre-line;
+  font-family: $Raleway-regular-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  color: $text-color;
+
+  margin: 0;
+
+  @include tablet-screen {
+    order: 2;
+    font-size: 14px;
+    line-height: 14.4px;
+  }
+
+  @include mobile-screen {
+    font-size: 13px;
+    line-height: 15.5px;
+  }
+}
+
+.navigationContainer {
+  display: flex;
+  align-items: center;
+}
+
+.buttonStatusBarContainer {
+  margin-right: 8px;
+}
+
+.statusBarContainer {
+  flex: 1;
+}

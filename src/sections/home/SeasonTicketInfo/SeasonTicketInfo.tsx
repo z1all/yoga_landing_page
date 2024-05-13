@@ -23,7 +23,7 @@ const SeasonTicketInfo = () => {
         <div className={classes.seasonTicketInfoContainer}>
             <img src={women} className={classes.imagWomen} alt="Woman meditating"/>
             <div className={classes.listContainer}>
-                {Infos.map(Info => <ListInfoItem info={Info}/>)}
+                {Infos.map(Info => <ListInfoItem info={Info} key={Info.number}/>)}
             </div>
         </div>
     );

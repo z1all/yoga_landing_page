@@ -6,6 +6,7 @@ import womanHoldingFoot from '../../../assets/imgs/home/woman-holding-foot.png'
 import StatusBar from "../../../components/ui/StatusBar/StatusBar";
 import NumbersStatusBas from "./NumbersStatusBas/NumbersStatusBas";
 import CircleButton, {CircleButtonType} from "../../../components/ui/CircleButton/CircleButton";
+import CircleButtonGroup from "../../../components/ui/CircleButtonGroup/CircleButtonGroup";
 
 const Slider = () => {
     const images = [
@@ -51,16 +52,13 @@ const Slider = () => {
                 )}
             </div>
             <div className={classes.navigationContainer}>
-                <div className={classes.numbersStatusBasContainer}>
-                    <NumbersStatusBas currentNumber={imgIndex + 1} maxNumber={imgCount}/>
+                <div className={classes.numbersStatusBarContainer}>
+                    <NumbersStatusBas currentNumber={imgIndex + 1} maxNumber={imgCount} transitionSpeed={transitionSpeed}/>
                 </div>
-                <div className={classes.statusBasContainer}>
-                    <StatusBar progress={((imgIndex + 1) / imgCount) * 100} transitionSpeed={transitionSpeed}/>
+                <div className={classes.statusBarContainer}>
+                    <StatusBar progress={{percent: ((imgIndex + 1) / imgCount) * 100}} transitionSpeed={transitionSpeed}/>
                 </div>
-                <div className={classes.buttonStatusBasContainer}>
-                    <CircleButton type={CircleButtonType.LeftArrow} className={classes.leftButton} onClick={moveLeft}/>
-                    <CircleButton type={CircleButtonType.RightArrow} onClick={moveRight}/>
-                </div>
+                <CircleButtonGroup moveLeft={moveLeft} moveRight={moveRight} className={classes.buttonStatusBarContainer}/>
             </div>
         </div>
     );

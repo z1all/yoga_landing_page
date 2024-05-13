@@ -81,7 +81,7 @@
   }
 }
 
-.numbersStatusBasContainer {
+.numbersStatusBarContainer {
   width: 26px;
   height: 19px;
   margin-right: 19px;
@@ -94,21 +94,12 @@
   }
 }
 
-.statusBasContainer {
+.statusBarContainer {
   flex: 1;
 }
 
-.buttonStatusBasContainer {
-  width: 76px;
-  height: 34px;
+.buttonStatusBarContainer {
   margin-left: 26px;
-
-  //border: 1px solid red;
-  //box-sizing: border-box;
-
-  .leftButton {
-    margin-right: 8px;
-  }
 
   @include tablet-screen {
     margin-left: 5px;
