@@ -1,0 +1,28 @@
+@import "src/styles/media";
+
+.container {
+  width: 346px;
+  height: 97px;
+
+  @include tablet-screen {
+    width: 338px;
+    height: 81px;
+  }
+
+  @include mobile-screen {
+    width: 327px;
+  }
+}
+
+.tariffContainer {
+
+}
+
+.line {
+  margin: 16px 0;
+  opacity: 50%;
+
+  @include tablet-screen {
+    margin: 8px 0;
+  }
+}

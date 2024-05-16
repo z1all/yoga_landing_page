@@ -1,0 +1,43 @@
+@import "src/styles/container";
+@import "src/styles/media";
+
+.pricesContainer {
+  @extend .commonContainer;
+  height: 437px;
+
+  border: 1px solid red;
+
+  @include tablet-screen {
+    height: 486px;
+  }
+
+  @include mobile-screen {
+    height: 794px;
+
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "titleAndHint";
+  }
+}
+
+.titleAndHint {
+  grid-area: titleAndHint;
+  margin-top: 9px;
+  margin-bottom: 72px;
+
+  @include tablet-screen {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  @include mobile-screen {
+    margin-top: 5px;
+    margin-bottom: 56px;
+  }
+}
+
+.prices {
+
+}

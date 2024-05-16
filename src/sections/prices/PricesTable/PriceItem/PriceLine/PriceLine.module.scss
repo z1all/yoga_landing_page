@@ -1,0 +1,70 @@
+@import "src/styles/variables";
+@import "src/styles/media";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countLessensContainer {
+  display: flex;
+}
+
+.countLessens {
+  font-family: $Raleway-regular-font;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 34px;
+
+  @include tablet-screen {
+    width: 20px;
+    height: 23px;
+    font-size: 32px;
+    line-height: 23px;
+  }
+}
+
+.countLessensText {
+  width: 67px;
+  margin: 1px 0 0 8px;
+  font-family: $Raleway-regular-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  display: flex;
+  align-items: end;
+
+  @include tablet-screen {
+    width: 67px;
+    height: 27px;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+}
+
+.price {
+  width: 145px;
+  height: 32px;
+
+  font-family: $Raleway-regular-font;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.007em;
+  text-align: end;
+
+  @include tablet-screen {
+    width: 99px;
+    height: 24px;
+    font-size: 32px;
+    line-height: 24px;
+  }
+}
+
+.topTextColor {
+  color: $text-color;
+}
+
+.bottomTextColor {
+  color: $accent-and-titles-color;
+}

@@ -1,11 +1,9 @@
-import {useMock} from "../../react-app-env";
-import {IDirection, Weekday} from "../../types/types";
-import MockAdapter from "axios-mock-adapter";
-import axios from "axios";
+import {useMock} from "../react-app-env";
+import {IDirection, Weekday} from "../types/types";
+import {mock} from "./mock-instance";
+
 
 if (useMock) {
-
-    const mock = new MockAdapter(axios);
 
     const directionsList : IDirection[] = [
         {
@@ -61,5 +59,4 @@ if (useMock) {
     ];
 
     mock.onGet('/api/directions').reply(200, directionsList);
-
 }

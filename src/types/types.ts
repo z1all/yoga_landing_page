@@ -17,3 +17,12 @@ export interface IDirection {
     imageUrl: string;
 }
 
+export interface IPrices {
+    tariff: IPrice;
+    benefit?: IPrice;
+}
+
+export interface IPrice {
+    countLessens: number;
+    price: number;
+}

@@ -1,5 +1,6 @@
 import axios, {AxiosInstance} from "axios";
-import {} from "../mock/directions/mock-directions"
+import {} from "../mock/mock-prices"
+import {} from "../mock/mock-directions"
 import {apiBaseUrl} from "../react-app-env";
 
 const axiosInstanceFactory = (): AxiosInstance => {
